@@ -50,8 +50,8 @@ def main():
 
     run_test_problem1a()
     run_test_problem1b()
-    # run_test_problem1c()
-    # run_test_problem1d()
+    run_test_problem1c()
+    run_test_problem1d()
 
 
 def run_test_problem1a():
@@ -601,8 +601,20 @@ def problem1c(strings):
       :type strings: list of str
       :rtype: bool
     """
+
+    count = 0
+    for k in range(len(strings)):
+        word = strings[k]
+        length_of_string = len(word)
+        if is_prime(length_of_string):
+            count = count + 1
+    if is_prime(count):
+        return True
+    else:
+        return False
+
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # COMPLETED: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # See  IMPORTANT  note before the DEF line of this function.
     # -------------------------------------------------------------------------
@@ -788,8 +800,16 @@ def problem1d(strings):
       :type strings: list of str
       :rtype: str | -1
     """
+
+    for k in range(len(strings)):
+        word = strings[k]
+        length_of_string = len(word)
+        if is_prime(length_of_string):
+            return strings[k]
+    return -1
+
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # COMPLETED: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
