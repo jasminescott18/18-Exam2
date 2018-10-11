@@ -110,7 +110,7 @@ def main():
     print(' to run the testing code as you complete the TODOs.')
 
     run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -195,13 +195,15 @@ def problem2a(triangle):
       :type triangle: Triangle
       :rtype: Triangle
     """
-    a = triangle.a * 2
-    b = triangle.b * 2
-    c = triangle.c * 2
-    triangle.__init__(a, b, c)
+
+    triangle.a = triangle.a * 2
+    triangle.b = triangle.b * 2
+    triangle.c = triangle.c * 2
+
+    return triangle
 
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # COMPLETED: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -358,8 +360,18 @@ def problem2b(triangles):
       :type triangles: list | tuple of Triangle
       :rtype: int | float
     """
+
+# Need to find a way to get the minimum side length and middle length to be in
+# in the formula... not sure how to do this however.
+
+    total = 0
+    for k in range(len(triangles)):
+        triangle = triangles[k]
+        total = total + triangle.get_area()
+    return total
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
