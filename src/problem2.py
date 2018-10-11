@@ -2,8 +2,8 @@
 Exam 2, problem 2.
 
 Authors: Dave Fisher, David Mutchler, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Jasmine Scott.  October 2018.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import time
@@ -109,7 +109,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
+    run_test_problem2a()
     # run_test_problem2b()
 
 
@@ -195,6 +195,11 @@ def problem2a(triangle):
       :type triangle: Triangle
       :rtype: Triangle
     """
+    a = triangle.a * 2
+    b = triangle.b * 2
+    c = triangle.c * 2
+    triangle.__init__(a, b, c)
+
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
