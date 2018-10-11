@@ -2,8 +2,8 @@
 Exam 2, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Jasmine Scott.  October 2018.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -48,8 +48,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem1a()
-    # run_test_problem1b()
+    run_test_problem1a()
+    run_test_problem1b()
     # run_test_problem1c()
     # run_test_problem1d()
 
@@ -217,8 +217,14 @@ def problem1a(strings):
       :type strings: list of str
       :rtype: list of int
     """
+    sequence = []
+    for k in range(len(strings)):
+        word = strings[k]
+        length_of_string = len(word)
+        sequence = sequence + [length_of_string]
+    return sequence
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # COMPLETED: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
@@ -390,8 +396,17 @@ def problem1b(strings):
       :type strings: list of str
       :rtype: int
     """
+
+    count = 0
+    for k in range(len(strings)):
+        word = strings[k]
+        length_of_string = len(word)
+        if is_prime(length_of_string):
+            count = count + 1
+    return count
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # COMPLETED: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
